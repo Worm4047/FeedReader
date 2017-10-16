@@ -37,7 +37,7 @@ $(function() {
                 expect(feed.url.length).not.toBe(0);
                 expect(feed.url).toMatch(/^(http|https):\/\//);
             });
-         })
+         });
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
@@ -49,7 +49,7 @@ $(function() {
                 expect(typeof feed.name).toBe("string");
                 expect(feed.name.length).not.toBe(0);
             });
-         })
+         });
     });
 
 
@@ -96,7 +96,7 @@ $(function() {
             var entries = $('.entry');
             expect(entries.length).not.toBe(0);
             done();
-        })
+        });
 
         it('has a entry that has a valid link',function(done){
             var entries = $('.entry-link');
@@ -121,7 +121,7 @@ $(function() {
                 intialFeed = $('feed').html();
                 loadFeed(1, function(){
                     done();
-                })
+                });
             });
         });
 
@@ -129,7 +129,7 @@ $(function() {
          	var newFeed = $('.feed').html();
          	expect(initFeed).not.toBe(newFeed);
          	done();
-         })
+         });
     });
 
 }());
