@@ -74,15 +74,15 @@ $(function() {
             });
         });
         it('check atleast one .entry within .feed',function(done){
-            var entries = $('body.entry');
+            var entries = $('.feed .entry');
             expect(entries.length).not.toBe(0);
             done();
         });
 
         it('has a entry that has a valid link',function(done){
             var entries = $('.entry-link');
-            entries.each(function(entryLink){
-                expect(entryLink.href).toMatch(/^(http|https):\/\//);
+            entries.each(function(idx){
+                expect(this.href).toMatch(/^(http|https):\/\//);
             });
             done();
         });
